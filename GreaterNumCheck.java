@@ -9,6 +9,7 @@ public class GreaterNumCheck {
 		System.out.println("Enter the second number: ");
 		int secondNum = sc.nextInt();
 		
+		
 		if(firstNum > secondNum) {
 			System.out.println(firstNum + " is greater than " + secondNum);
 		}  else if(secondNum > firstNum) {

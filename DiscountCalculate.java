@@ -18,6 +18,5 @@ public class DiscountCalculate {
 		System.out.println("You bought total " + sareeNo +" no of Saree(s)");
 		System.out.println("Your total amount is " + totalSellingPrice);
 		System.out.println("You got a discount of " + discount +" %");
-		
 	}
 }

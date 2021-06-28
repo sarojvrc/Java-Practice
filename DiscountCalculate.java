@@ -13,7 +13,7 @@ public class DiscountCalculate {
 		
 		int totalSareeMRP = sareeMRP * sareeNo;
 		int totalSellingPrice = sareePrice * sareeNo;
-		int discount = ((totalSareeMRP-totalSellingPrice)/totalSareeMRP)*100;
+		int discount = (totalSareeMRP-totalSellingPrice)/100;
 		
 		System.out.println("You bought total " + sareeNo +" no of Saree(s)");
 		System.out.println("Your total amount is " + totalSellingPrice);

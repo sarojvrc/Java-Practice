@@ -3,12 +3,12 @@ import java.util.*;
 
 public class GreaterNumCheck {
 	public static void main(String args[]) {
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the first number: ");
 		int firstNum = sc.nextInt();
 		System.out.println("Enter the second number: ");
 		int secondNum = sc.nextInt();
-		
 		
 		if(firstNum > secondNum) {
 			System.out.println(firstNum + " is greater than " + secondNum);

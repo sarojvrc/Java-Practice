@@ -16,11 +16,11 @@ public class ArmstongNumber {
 			leng = leng + 1;
 		}
 		
-		int t2 = no; int rem, arm = 0;
+		int t2 = no; int rem, mult, arm = 0;
 		while(t2 != 0) {
 			rem = t2/10;
-			int mult = 1;
-			for(int i =1; i<= leng; i++) {
+			mult = 1;
+			for(int i=1; i<= leng; i++) {
 				mult = mult * rem;
 			}
 			arm = arm + mult;
@@ -28,9 +28,9 @@ public class ArmstongNumber {
 		}
 		
 		if(no == arm) {
-			System.out.println(no + " is a armstrong number");
+			System.out.println(no + " is an armstrong number");
 		}else {
-			System.out.println(no + " is not a armstrong number");
+			System.out.println(no + " is not an armstrong number");
 		}
 	}
 

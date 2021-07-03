@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class FarenhiteToCelcius {
 	public static void main(String args[]) {
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the temparature in Farenhite: ");
 		int Farenhite = sc.nextInt();

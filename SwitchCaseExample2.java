@@ -14,6 +14,8 @@ public class SwitchCaseExample2 {
 		switch(method) {
 		case Add:
 			System.out.println("The addition of two nos is: "+no1+no2);
+			break;
+			
 		}
 	}
 }

@@ -12,10 +12,23 @@ public class SwitchCaseExample2 {
 		System.out.print("What you want to do(Add/Sub/Mult/Div): ");
 		String method = sc.next();
 		switch(method) {
-		case Add:
-			System.out.println("The addition of two nos is: "+no1+no2);
+		case "Add":
+			int add = no1+no2;
+			System.out.println("The addition of two nos is: "+ add);
 			break;
-			
+		case "Div":
+			float div = (float)(no1/no2);
+			System.out.println("The division of two nos is: "+div);
+			break;
+		case "Mult":
+			int mult = no1*no2;
+			System.out.println("The multiplication of two nos is: "+mult);
+			break;
+		case "Sub":
+			int sub = no1-no2;
+			System.out.println("The substraction of two nos is: "+sub);
+			break;
+						
 		}
 	}
 }

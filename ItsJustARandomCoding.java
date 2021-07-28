@@ -19,7 +19,7 @@ public class ItsJustARandomCoding {
 			System.out.print("Ohh Man "+name+" You can't drive now, wait for 18. ");
 			//System.out.print(" You can't drive now, wait for 18.");
 		}
-		//new
+		
 		System.out.println("Just apply a DL, you will get a OTP in "+mob+", then only you can drive. Cool");
 		System.out.println("Just apply a DL, you will get a OTP in "+mob+", then only you can drive. Cool");
 	}

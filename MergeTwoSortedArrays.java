@@ -7,7 +7,7 @@ public class MergeTwoSortedArrays {
 	static void Merge(int arr1[], int arr2[], int size1, int size2) {
 		int newsize = size1 + size2;
 		int newarr[] = new int[newsize];
-		int i=1, j=1, k=1;
+		int i=0, j=0, k=0;
 		while(i<= size1 && j<= size2) {
 			if(arr1[i]<arr2[j]) {
 				newarr[k++] = arr1[i++];

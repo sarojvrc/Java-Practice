@@ -10,16 +10,20 @@ public class MergeTwoSortedArrays {
 		int i=0, j=0, k=0;
 		while(i<= size1 && j<= size2) {
 			if(arr1[i]<arr2[j]) {
-				newarr[k++] = arr1[i++];
+				newarr[k] = arr1[i];
+				k++; i++;
 			}else {
-				newarr[k++] = arr2[j++];
+				newarr[k] = arr2[j];
+				k++; j++;
 			}
 		}
 		for(; i<= size1; i++) {
-			newarr[k++] = arr1[i];
+			newarr[k] = arr1[i];
+			k++;
 		}
 		for(; j<=size2; j++) {
-			newarr[k++] = arr2[j];
+			newarr[k] = arr2[j];
+			k++;
 		}
 		System.out.println("New array is "+Arrays.toString(newarr));
 	}

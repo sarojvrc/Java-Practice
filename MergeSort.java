@@ -1,54 +1,84 @@
 package practice;
 
-import java.util.Arrays;
+import java.util.*;
+//first we get array which is unsorted
+//first we have to divide the array
 
 public class MergeSort {
-	//function to sort the array
-	static void Sort(int arr[], int li, int ui, int mid) {
-		int i = li;
-		int j = mid + 1;
-		int k = li;
-		int newarr[] = new int[arr.length];
-		while(i <= mid && j <= ui) {
-			if(arr[i]<= arr[j]) {
-				newarr[k] = arr[i];
-				i++;
-			}else {
-				newarr[k] = arr[j];
-				j++;
-			}
-			k++;
-		} //while ends here
-		if(i>mid) {
-			while(j<=ui) {
-				newarr[k] = arr[j];
-				k++; j++;
-			}
-		}else {
-			while(i<=mid) {
-				newarr[k] = arr[i];
-				k++; i++;
-			}
-		}
-		
-		for(k=li; k<= ui; k++) {
-			arr[k] = newarr[k];
-		}
-	}
+static void printArray(int arr[]){
+ int size=arr.length;
+ System.out.print("array is:");
+ for (int i=0;i<size;i++){
+     System.out.print(arr[i]+" ");
+ }
+}
+ static void merge(int arr[],int start,int mid,int end){
+     int size1=mid-start+1;
+     int size2=end-mid;
 
-	//driver code
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int arr[] = {5,87,12,4,98,3,45,74,6,14,2,1,48,45,1,452,14,95,15};
-		System.out.println("Array before sort "+Arrays.toString(arr));
-		int li = 0; //li means lower index which
-		int ui = arr.length-1; //ui means upper index
-		int mid = (li+ui)/2;
-		
-		//call mergesort
-		MergeSort.Sort(arr, li, ui, mid);
-		System.out.println("Array after sorting "+Arrays.toString(arr));
+     int left[]=new int[size1];
+     int right[]=new int[size2];
 
-	}
+     for(int i=0;i<size1;i++){
+         left[i]=arr[start+i];
+     }
 
+     for(int i=0;i<size2;i++){
+         right[i]=arr[mid+1+i];
+     }
+
+     int i=0,j=0,k=start;
+
+     while(i<size1 && j<size2){
+         if (left[i]<right[j]){
+             arr[k]=left[i];
+             i++;
+         }
+         else{
+             arr[k]=right[j];
+             j++;}
+         k++;
+     }
+     while(i<size1){
+         arr[k]=left[i];
+         i++;
+         k++;
+     }
+
+     while(j<size2){
+         arr[k]=right[j];
+         j++;
+         k++;
+     }
+ }
+ static void sort(int arr[],int start,int end){
+     if (start<end){
+         int mid=(start+end)/2;
+         sort(arr,start,mid);
+         sort(arr,mid+1,end);
+         merge(arr,start,mid,end);
+     }
+ }
+
+
+ public static void main(String[] args) {
+     Scanner sc=new Scanner (System.in);
+     System.out.println("Enter size of array");
+     int n=sc.nextInt();
+
+     System.out.println("Enter input of array");
+     int arr[]=new int[n];
+
+     for (int i=0;i<n;i++){
+         arr[i]=sc.nextInt();
+     }
+
+     int start=0;
+     int end=arr.length-1;
+     sort(arr,start,end);
+
+     printArray(arr);
+
+
+ }
 }
